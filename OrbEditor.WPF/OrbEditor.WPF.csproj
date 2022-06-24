@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\OrbEditor.ViewModels.Design\OrbEditor.ViewModels.Design.csproj" />
     <ProjectReference Include="..\OrbEditor.ViewModels\OrbEditor.ViewModels.csproj" />
   </ItemGroup>
 

@@ -1,5 +1,5 @@
-﻿using OrbEditor.ViewModels;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
+using OrbEditor.ViewModels;
 using System.Windows;
 
 namespace OrbEditor.WPF
@@ -14,6 +14,7 @@ namespace OrbEditor.WPF
 
             services.AddSingleton<MainWindow>();
             services.AddTransient<MainWindowViewModel>();
+            services.AddTransient<OrbViewModel>();
 
             serviceProvider = services.BuildServiceProvider();
         }

@@ -1,8 +1,18 @@
-﻿using MVVM;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace OrbEditor.ViewModels
 {
-    public class OrbViewModel : ViewModel
+    [INotifyPropertyChanged]
+    public partial class OrbViewModel
     {
+        public const uint DefaultSizePx = 100;
+
+        [ObservableProperty]
+        private uint sizePx;
+
+        public OrbViewModel()
+        {
+            sizePx = DefaultSizePx;
+        }
     }
 }

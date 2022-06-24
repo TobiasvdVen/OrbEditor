@@ -1,12 +1,21 @@
-﻿<UserControl x:Class="OrbEditor.WPF.Views.GemView"
+﻿<UserControl x:Class="OrbEditor.WPF.Views.OrbView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:OrbEditor.WPF.Views"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
-    </Grid>
+             xmlns:design="clr-namespace:OrbEditor.ViewModels.Design;assembly=OrbEditor.ViewModels.Design"
+             mc:Ignorable="d"
+             Height="{Binding SizePx}"
+             Width="{Binding SizePx}"
+             d:DesignHeight="512"  d:DesignWidth="512"
+             d:DataContext="{d:DesignInstance design:DesignOrbViewModel, IsDesignTimeCreatable=True}">
+
+        <Ellipse  
+                Fill="#FFFFFF00"  
+                Height="{Binding SizePx}"
+                Width="{Binding SizePx}"  
+                StrokeThickness="5"  
+                Stroke="#FF0000FF"
+            />
 </UserControl>
