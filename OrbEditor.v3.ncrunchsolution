@@ -3,4 +3,12 @@
     <AllowParallelTestExecution>True</AllowParallelTestExecution>
     <SolutionConfigured>True</SolutionConfigured>
   </Settings>
+  <EngineModes>
+    <EngineMode>
+      <Name>Run all unit tests automatically</Name>
+      <Settings>
+        <TestsToExecuteAutomatically>IsNotInProjectWithName 'OrbEditor.WPF.Tests'</TestsToExecuteAutomatically>
+      </Settings>
+    </EngineMode>
+  </EngineModes>
 </SolutionConfiguration>
