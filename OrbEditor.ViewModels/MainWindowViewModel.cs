@@ -1,37 +1,12 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-
-namespace OrbEditor.ViewModels
+﻿namespace OrbEditor.ViewModels
 {
-    [INotifyPropertyChanged]
     public partial class MainWindowViewModel
     {
-        public const string DefaultTitle = "Title";
-        public const float DefaultOrbSizeCm = 2.5f;
-        public const uint DefaultCmToPixels = 100;
-
-        [ObservableProperty]
-        private string title;
-
-        [ObservableProperty]
-        private float orbSizeCm;
-
-        [ObservableProperty]
-        private uint cmToPixels;
-
-        public MainWindowViewModel(OrbViewModel orbViewModel)
+        public MainWindowViewModel(EditorViewModel editorViewModel)
         {
-            OrbViewModel = orbViewModel;
-
-            title = DefaultTitle;
-            orbSizeCm = DefaultOrbSizeCm;
-            cmToPixels = DefaultCmToPixels;
+            EditorViewModel = editorViewModel;
         }
 
-        public OrbViewModel OrbViewModel { get; }
-
-        partial void OnOrbSizeCmChanged(float value)
-        {
-            OrbViewModel.SizePx = (uint)(value * cmToPixels);
-        }
+        public EditorViewModel EditorViewModel { get; }
     }
 }

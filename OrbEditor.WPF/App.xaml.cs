@@ -14,6 +14,7 @@ namespace OrbEditor.WPF
 
             services.AddSingleton<MainWindow>();
             services.AddTransient<MainWindowViewModel>();
+            services.AddTransient<EditorViewModel>();
             services.AddTransient<OrbViewModel>();
 
             serviceProvider = services.BuildServiceProvider();

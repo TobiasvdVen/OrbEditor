@@ -2,16 +2,13 @@
 {
     public class DesignMainWindowViewModel : MainWindowViewModel
     {
-        public DesignMainWindowViewModel() : base(MockOrbViewModel())
+        public DesignMainWindowViewModel() : base(MockEditorViewModel())
         {
         }
 
-        private static OrbViewModel MockOrbViewModel()
+        private static EditorViewModel MockEditorViewModel()
         {
-            return new OrbViewModel()
-            {
-                SizePx = 256
-            };
+            return new DesignEditorViewModel();
         }
     }
 }
