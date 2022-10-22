@@ -12,9 +12,7 @@
              d:DataContext="{d:DesignInstance design:DesignOrbViewModel, IsDesignTimeCreatable=True}">
 
         <Ellipse  
-                Fill="#FFFFFF00"  
-                Height="{Binding SizePx}"
-                Width="{Binding SizePx}"  
+                Fill="#FFFFFF00"                  
                 StrokeThickness="5"  
                 Stroke="#FF0000FF"
             />
